@@ -8,18 +8,26 @@
 ### Алгоритм
 1. Начало 
 2. Задать исходные данные:
-    + `frequency` – частота в ГГц
-    + `speed_of_light = 299792458.0` – константа скорости света
-3. Конвертировать частоты из ГГц в Гц:
-    + `frequency_Hz = frequency * 1000000000.0`
-4. Вычислить длину волны:
-    + `wavelength = speed_of_light / frequency_Hz`
+    + `x, y, z` – входные данные
+3. Вычислить компоненты выражения:
+    + `cube_x = cbrt(x)`
+    + `term1 = y^(cube_x)` - первое слагаемое
+    + `term2 = (cos(y))^3` - первый множитель
+    + `abs_xy = |x - y|`
+    + `sin_z_sq = (sin(z))^2`
+    + `sqrt_x = √(x + y)`
+    + `drob = 1 + (sin_z_sq / sqrt_x)`
+    + `num = abs_xy × drob`
+    + `e = e^(|x-y|) + x/2`
+    + `term3: term3 = num / e` - второй множитель
+4. Вычислить конечный результат:
+    + `b = term1 + term2 × term3`
 5. Вывести результаты расчетов с подстановкой всех значений в текст.
 6. Конец
 
 ### Блок-схема
-[Блок-схема, созданная в draw.io](https://drive.google.com/file/d/159q64y6Vzy-zjMdXwp1i-9iCqzu_hGN8/view?usp=drive_link)
-![](https://github.com/user-attachments/assets/fafe4a71-2dd9-42f5-925f-7a70bf7bcb88)
+[Блок-схема, созданная в draw.io](https://drive.google.com/file/d/1DBERrnwY4HehlCPD0yVs4my-yi8nZZbY/view?usp=drive_link)
+![](https://github.com/user-attachments/assets/cf4b1adb-eb61-4ba5-adda-00811e3a1202)
 
 ## 2. Реализация программы 
 ## 3. Результаты работы программы 
